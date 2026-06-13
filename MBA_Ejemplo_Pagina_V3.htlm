@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Oficina de Relaciones Internacionales - Alcaldía de Barranquilla. Hub logístico, inversión y cooperación del Caribe.">
+    <title>ORI | Barranquilla Global</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F2C59',      
+                        secondary: '#10B981',    
+                        accent: '#D97706',       
+                        neutralBg: '#F8FAFC'     
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'ejecutivo': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        html.dark .glass-effect {
+            background: rgba(15, 23, 42, 0.95); 
+            border-color: #1e293b;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 44, 89, 0.8), rgba(15, 44, 89, 0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+        }
+        html.dark .hero-bg {
+            background: linear-gradient(rgba(8, 20, 45, 0.95), rgba(8, 20, 45, 0.95)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+        }
+    </style>
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+<body class="bg-neutralBg dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans antialiased selection:bg-secondary selection:text-white transition-colors duration-300">
+
+    <header class="fixed w-full z-50 glass-effect border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <i data-lucide="globe-2" class="text-primary dark:text-blue-400 w-8 h-8"></i>
+                    <span class="font-heading font-bold text-xl text-primary dark:text-blue-400 tracking-tight">ORI Barranquilla</span>
+                </div>
+                
+                <div class="hidden md:flex flex-1 max-w-md mx-8">
+                    <div class="relative w-full">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i data-lucide="search" class="text-gray-400 w-5 h-5"></i>
+                        </div>
+                        <input type="text" class="block w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-600 rounded-ejecutivo leading-5 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-primary dark:focus:ring-blue-400 focus:border-primary dark:focus:border-blue-400 sm:text-sm transition-colors" placeholder="Buscar proyectos, fondos, incentivos...">
+                    </div>
+                </div>
+
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#pilares" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors">Pilares</a>
+                    <a href="#dashboard" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors">Impacto</a>
+                    <a href="#transparencia" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-blue-400 transition-colors">Transparencia</a>
+                    
+                    <div class="flex items-center gap-4 border-l pl-6 border-gray-300 dark:border-gray-700">
+                        <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-lg text-sm p-2 transition-colors">
+                            <i data-lucide="moon" id="theme-toggle-dark-icon" class="hidden w-5 h-5"></i>
+                            <i data-lucide="sun" id="theme-toggle-light-icon" class="hidden w-5 h-5"></i>
+                        </button>
+
+                        <div class="flex items-center gap-2">
+                            <button class="text-sm font-medium text-primary dark:text-blue-400 hover:text-accent transition-colors">ES</button>
+                            <span class="text-gray-300 dark:text-gray-600">|</span>
+                            <button class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-blue-400 transition-colors">EN</button>
+                        </div>
+
+                        <a href="login.html" class="ml-2 inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-ejecutivo shadow-sm text-sm font-medium text-white bg-primary dark:bg-blue-600 hover:bg-opacity-90 dark:hover:bg-blue-700 transition-colors">
+                            <i data-lucide="user-circle" class="w-4 h-4 mr-2"></i>
+                            Ingresar
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-bg h-screen flex items-center transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left">
+            <h1 class="text-4xl tracking-tight font-heading font-bold text-white sm:text-5xl md:text-6xl max-w-4xl">
+                Barranquilla: <span class="text-secondary dark:text-emerald-400">Hub Logístico</span> y Sostenible del Caribe
+            </h1>
+            <p class="mt-6 text-base text-gray-200 dark:text-gray-300 sm:text-lg md:text-xl max-w-2xl font-light">
+                Conectamos el tejido productivo local con las oportunidades globales. Facilitamos la inversión extranjera, canalizamos fondos de cooperación y lideramos la agenda de Biodiverciudad.
+            </p>
+            <div class="mt-10 sm:flex sm:justify-center lg:justify-start gap-4">
+                <a href="#banco-proyectos" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-ejecutivo text-white bg-primary dark:bg-blue-600 hover:bg-opacity-90 dark:hover:bg-blue-700 md:py-4 md:text-lg md:px-10 transition-all shadow-lg hover:shadow-xl">
+                    <i data-lucide="folder-search" class="mr-2 w-5 h-5"></i>
+                    Portafolio de Proyectos
+                </a>
+                <a href="#ventanilla-unica" class="mt-3 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-ejecutivo text-white bg-accent dark:bg-amber-600 hover:bg-opacity-90 dark:hover:bg-amber-700 md:py-4 md:text-lg md:px-10 transition-all shadow-lg hover:shadow-xl sm:mt-0">
+                    <i data-lucide="briefcase" class="mr-2 w-5 h-5"></i>
+                    Ventanilla de Inversión
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            lightIcon.classList.remove('hidden');
+        } else {
+            darkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            darkIcon.classList.toggle('hidden');
+            lightIcon.classList.toggle('hidden');
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
