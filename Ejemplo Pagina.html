@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Oficina de Relaciones Internacionales - Alcaldía de Barranquilla. Hub logístico, inversión y cooperación del Caribe.">
+    <title>ORI | Barranquilla Global</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F2C59',     /* Azul Corporativo */
+                        secondary: '#10B981',   /* Verde Esmeralda Sostenible */
+                        accent: '#D97706',      /* Dorado Cálido */
+                        neutralBg: '#F8FAFC'    /* Fondo Limpio */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'ejecutivo': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos adicionales de UI */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 44, 89, 0.8), rgba(15, 44, 89, 0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body class="bg-neutralBg text-gray-800 font-sans antialiased selection:bg-secondary selection:text-white">
+
+    <header class="fixed w-full z-50 glass-effect border-b border-gray-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <i data-lucide="globe-2" class="text-primary w-8 h-8"></i>
+                    <span class="font-heading font-bold text-xl text-primary tracking-tight">ORI Barranquilla</span>
+                </div>
+                
+                <div class="hidden md:flex flex-1 max-w-md mx-8">
+                    <div class="relative w-full">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i data-lucide="search" class="text-gray-400 w-5 h-5"></i>
+                        </div>
+                        <input type="text" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-ejecutivo leading-5 bg-white placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors" placeholder="Buscar proyectos, fondos, incentivos...">
+                    </div>
+                </div>
+
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#pilares" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Pilares</a>
+                    <a href="#dashboard" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Impacto</a>
+                    <a href="#transparencia" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Transparencia</a>
+                    
+                    <div class="flex items-center gap-2 border-l pl-6 border-gray-300">
+                        <button class="text-sm font-medium text-primary hover:text-accent transition-colors">ES</button>
+                        <span class="text-gray-300">|</span>
+                        <button class="text-sm font-medium text-gray-500 hover:text-primary transition-colors">EN</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-bg h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left">
+            <h1 class="text-4xl tracking-tight font-heading font-bold text-white sm:text-5xl md:text-6xl max-w-4xl">
+                Barranquilla: <span class="text-secondary">Hub Logístico</span> y Sostenible del Caribe
+            </h1>
+            <p class="mt-6 text-base text-gray-200 sm:text-lg md:text-xl max-w-2xl font-light">
+                Conectamos el tejido productivo local con las oportunidades globales. Facilitamos la inversión extranjera, canalizamos fondos de cooperación y lideramos la agenda de Biodiverciudad.
+            </p>
+            <div class="mt-10 sm:flex sm:justify-center lg:justify-start gap-4">
+                <a href="#banco-proyectos" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-ejecutivo text-white bg-primary hover:bg-opacity-90 md:py-4 md:text-lg md:px-10 transition-all shadow-lg hover:shadow-xl">
+                    <i data-lucide="folder-search" class="mr-2 w-5 h-5"></i>
+                    Portafolio de Proyectos
+                </a>
+                <a href="#ventanilla-unica" class="mt-3 w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-ejecutivo text-white bg-accent hover:bg-opacity-90 md:py-4 md:text-lg md:px-10 transition-all shadow-lg hover:shadow-xl sm:mt-0">
+                    <i data-lucide="briefcase" class="mr-2 w-5 h-5"></i>
+                    Ventanilla de Inversión
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="dashboard" class="py-12 bg-white border-b border-gray-200 -mt-10 relative z-20 mx-4 lg:mx-auto max-w-7xl rounded-xl shadow-lg">
+        <div class="px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                        <div class="p-3 bg-blue-50 rounded-full text-primary">
+                            <i data-lucide="circle-dollar-sign" class="w-8 h-8"></i>
+                        </div>
+                    </div>
+                    <p class="text-4xl font-heading font-bold text-primary">$45M+</p>
+                    <p class="mt-2 text-sm font-medium text-gray-500 uppercase tracking-wide">Fondos Gestionados</p>
+                </div>
+                <div class="p-6 md:border-l md:border-r border-gray-100">
+                    <div class="flex justify-center mb-4">
+                        <div class="p-3 bg-green-50 rounded-full text-secondary">
+                            <i data-lucide="leaf" class="w-8 h-8"></i>
+                        </div>
+                    </div>
+                    <p class="text-4xl font-heading font-bold text-secondary">1,250</p>
+                    <p class="mt-2 text-sm font-medium text-gray-500 uppercase tracking-wide">Empleos Verdes Generados</p>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                        <div class="p-3 bg-orange-50 rounded-full text-accent">
+                            <i data-lucide="bar-chart-3" class="w-8 h-8"></i>
+                        </div>
+                    </div>
+                    <p class="text-4xl font-heading font-bold text-gray-900">24</p>
+                    <p class="mt-2 text-sm font-medium text-gray-500 uppercase tracking-wide">Proyectos Activos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pilares" class="py-20 bg-neutralBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-heading font-bold text-primary sm:text-4xl">Ejes de Acción Global</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Estructura operativa diseñada para convertir a Barranquilla en un destino atractivo para el capital y el talento.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-ejecutivo p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group cursor-pointer">
+                    <i data-lucide="handshake" class="w-10 h-10 text-primary mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-heading font-bold text-gray-900 mb-3">Cooperación Internacional</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Gestión de fondos no reembolsables y asistencia técnica con agencias (USAID, BID) estructurada bajo metodologías de Marco Lógico.</p>
+                    <span class="text-primary font-semibold text-sm flex items-center group-hover:text-accent transition-colors">
+                        Ver Convocatorias <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </div>
+
+                <div class="bg-white rounded-ejecutivo p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group cursor-pointer">
+                    <i data-lucide="building-2" class="w-10 h-10 text-accent mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-heading font-bold text-gray-900 mb-3">Atracción de Inversión (IED)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Ventanilla única Fast-Track para inversionistas. Articulación con Zonas Francas, beneficios tributarios y el clúster logístico portuario.</p>
+                    <span class="text-primary font-semibold text-sm flex items-center group-hover:text-accent transition-colors">
+                        Acceder a Fast-Track <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </div>
+
+                <div class="bg-white rounded-ejecutivo p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group cursor-pointer">
+                    <i data-lucide="ship" class="w-10 h-10 text-primary mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-heading font-bold text-gray-900 mb-3">Internacionalización Local</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Promoción de PYMES locales, diplomacia económica y City Marketing orientado al turismo de negocios y eventos (Puerta de Oro).</p>
+                    <span class="text-primary font-semibold text-sm flex items-center group-hover:text-accent transition-colors">
+                        Misiones Comerciales <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </div>
+
+                <div class="bg-white rounded-ejecutivo p-8 shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100 group cursor-pointer">
+                    <i data-lucide="network" class="w-10 h-10 text-secondary mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h3 class="text-xl font-heading font-bold text-gray-900 mb-3">Redes y Paradiplomacia</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Participación en redes globales (C40, ICLEI) y hermanamientos orientados a la agenda de Biodiverciudad e inclusión migratoria.</p>
+                    <span class="text-primary font-semibold text-sm flex items-center group-hover:text-accent transition-colors">
+                        Agenda Bilateral <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transparencia" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2">
+                <h2 class="text-3xl font-heading font-bold text-primary mb-6">Auditoría y Transparencia en Tiempo Real</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Nuestros cooperantes internacionales exigen rigurosidad técnica. Mediante nuestro portal de datos abiertos, realizamos un seguimiento exhaustivo al retorno de inversión (ROI) social y económico, alineados con los Objetivos de Desarrollo Sostenible (ODS).
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-secondary mr-3 flex-shrink-0"></i>
+                        <span class="text-gray-700">Trazabilidad financiera de fondos no reembolsables.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-secondary mr-3 flex-shrink-0"></i>
+                        <span class="text-gray-700">Indicadores de impacto medibles por Secretaría Rectora.</span>
+                    </li>
+                </ul>
+                <button class="px-6 py-3 border border-primary text-primary font-medium rounded-ejecutivo hover:bg-primary hover:text-white transition-colors">
+                    Ingresar al Portal de Datos
+                </button>
+            </div>
+            
+            <div class="w-full md:w-1/2 bg-neutralBg rounded-xl p-6 border border-gray-200 shadow-inner">
+                <div class="flex justify-between items-center mb-6">
+                    <h4 class="font-bold text-gray-800">Distribución de Inversión 2026</h4>
+                    <i data-lucide="download" class="w-5 h-5 text-gray-500 cursor-pointer hover:text-primary"></i>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1 text-gray-600"><span>Transición Energética</span> <span>45%</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-secondary h-2 rounded-full" style="width: 45%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1 text-gray-600"><span>Infraestructura Portuaria</span> <span>30%</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-primary h-2 rounded-full" style="width: 30%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1 text-gray-600"><span>Inclusión Migratoria</span> <span>25%</span></div>
+                        <div class="w-full bg-gray-200 rounded-full h-2"><div class="bg-accent h-2 rounded-full" style="width: 25%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary text-white pt-16 pb-8 border-t-4 border-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i data-lucide="globe-2" class="w-8 h-8 text-secondary"></i>
+                        <span class="font-heading font-bold text-2xl tracking-tight">ORI</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed max-w-sm">
+                        Agencia de desarrollo y posicionamiento global de la Alcaldía de Barranquilla. Conectando la oferta local con recursos y conocimiento del mundo.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold mb-6 text-secondary">Accesos Rápidos</h4>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Ventanilla Única Inversión</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Banco de Proyectos</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Indicadores de Impacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold mb-6 text-secondary">Contacto</h4>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-accent"></i> Paseo Bolívar, Barranquilla, COL</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-accent"></i> inversion@barranquilla.gov.co</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+                <p>&copy; 2026 Alcaldía de Barranquilla. Todos los derechos reservados.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Políticas de Privacidad (Ley 1581)</a>
+                    <a href="#" class="hover:text-white transition-colors">Accesibilidad WCAG</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
